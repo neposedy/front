@@ -92,6 +92,12 @@ gulp.task('assets', 'Copy stuff from the assets folder', function() {
         .pipe(gulp.dest(config.public));
 });
 
+gulp.task('templates', 'templates', function() {
+    return gulp.src(config.allTemplateFiles)
+        .pipe(gulp.dest(config.public + '/templates'));
+});
+
+
 gulp.task('bower', 'Include bower stuff', function() {
     bower();
     return gulp.src('./bower_components/*')
@@ -122,7 +128,7 @@ gulp.task('watch', 'Watch for changes and build it all.' , ['build'], function()
     gulp.watch('bower.json', ['bower']);
 });
 
-gulp.task('build', 'Build it once', ['bower', 'less', 'angtemp','ts-lint', 'compile-ts', 'assets']);
+gulp.task('build', 'Build it once', ['bower', 'less', 'templates','ts-lint', 'compile-ts', 'assets']);
 
 gulp.task('serve', 'Serve the generated stuff.', ['watch'], function() {
 //    gulp.start();
