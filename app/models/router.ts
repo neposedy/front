@@ -21,17 +21,17 @@ module demoApp.config {
                     },
                     'footer': {
                         controller: 'FooterController',
-                        templateUrl: 'templates/footer.html'
+                        templateUrl: 'templates/footer/footer.html'
                     },
                     'header': {
                         controller: 'HeaderController',
-                        templateUrl: 'templates/header.html'
+                        templateUrl: 'templates/header/header.html'
                     }
                 }
             })
             .state('neposedy.layout.homepage', {
                 url: '/',
-                templateUrl: 'templates/homepage.html',
+                templateUrl: 'templates/homepage/homepage.html',
                 controller: 'HomepageController'
             });
 
