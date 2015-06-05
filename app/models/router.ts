@@ -30,12 +30,12 @@ module demoApp.config {
                 }
             })
             .state('neposedy.layout.homepage', {
-                url: '/',
+                url: '',
                 templateUrl: 'templates/homepage/homepage.html',
                 controller: 'HomepageController'
             })
             .state('neposedy.layout.game', {
-                url: '/',
+                url: '/game',
                 templateUrl: 'templates/game/game.html',
                 controller: 'GameController'
             });
