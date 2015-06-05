@@ -1,5 +1,13 @@
+
 body, html {
   font-size: 12px;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+.app-wrap {
+  height: 100%;
 }
 
 .main {
@@ -9,7 +17,7 @@ body, html {
 
 .flex-app-wrap {
   flex-direction: column !important;
-  min-height: 100vh;
+  min-height: 100%;
   display: flex;
 }
 
@@ -19,15 +27,24 @@ body, html {
   color: @white;
   text-align: center;
   font-size: 2em;
+  line-height: 3em;
   font-family: 'Indie Flower', cursive;
+  font-weight: bold;
 }
 
 .flex-footer {
-  min-height: 150px;
+  overflow: hidden;
+  min-height: 50px;
   background: @rgba-primary-3;
+  text-align: center;
+  color: @white;
+  margin: 0 !important;
+  font-family: 'Indie Flower', cursive;
+
+
 }
 
 .flex-main {
   flex: 1;
-  background: @rgba-secondary-2-0;
+  background: @color-primary-1;
 }

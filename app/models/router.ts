@@ -33,6 +33,11 @@ module demoApp.config {
                 url: '/',
                 templateUrl: 'templates/homepage/homepage.html',
                 controller: 'HomepageController'
+            })
+            .state('neposedy.layout.game', {
+                url: '/',
+                templateUrl: 'templates/game/game.html',
+                controller: 'GameController'
             });
 
     }
