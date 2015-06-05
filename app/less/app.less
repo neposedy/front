@@ -3,7 +3,98 @@
 @import "_game-field.less";
 @import "_homepage.less";
 
+@square_gap:8%;
 
-.game-field {
 
+.game-page {
+  height: 100%;
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto !important;
+  padding: 0 20px;
+}
+
+.game-board {
+  max-width: 500px !important;
+  width: 100%;
+}
+
+
+.game-field-wrap {
+  width: 0;
+  height: 0;
+  padding: 50%;
+  position: relative;
+
+
+
+  .game-field {
+    background: @color-secondary-2-1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: @square_gap;
+  }
+}
+
+.square-wrap {
+  padding: 16.6%;
+  position: relative;
+  float: left;
+  font-family: 'Indie Flower', cursive;
+
+  .square {
+    position: absolute;
+    top: @square_gap;
+    right: @square_gap;
+    bottom: @square_gap;
+    left: @square_gap;
+
+
+
+    input {
+      width: 100%;
+      height: 100%;
+      line-height: 100%;
+      background: @color-secondary-2-2;
+      border:0;
+      text-align: center;
+      font-size: 8vw;
+      font-family: 'Indie Flower', cursive;
+    }
+  }
+
+  .square.corner-square {
+    input {
+      background: @color-primary-0;
+    }
+  }
+
+  .square.square-center {
+    width: 100%;
+    height: 100%;
+    margin: -@square_gap;
+    font-size: 8vw;
+    text-align: center;
+    font-family: Arial;
+    font-weight: bold;
+    font-family: 'Indie Flower', cursive;
+    color: @rgba-secondary-1-4
+  }
+}
+
+.choices {
+  
+  .choice-number {
+    color: @white;
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: 'Indie Flower', cursive;
+    display: inline-block;
+    padding: 5px 8px;
+    margin: 4px 2px;
+    background: @rgba-secondary-2-3;
+  } 
 }
