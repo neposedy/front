@@ -20,11 +20,6 @@ module demoApp {
                     private $location:ng.ILocationService) {
         }
 
-
-        setName(name: string) {
-            this.$scope.name = name;
-        }
-
     }
 
 }

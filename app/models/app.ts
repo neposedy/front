@@ -13,9 +13,5 @@ module demoApp {
             'ui.router'
         ])
         .controller('DemoController', DemoController)
-        .config(['$stateProvider', '$urlRouterProvider',
-            ($stateProvider, $urlRouterProvider) => {
-                return new demoApp.RouterConfig($stateProvider, $urlRouterProvider);
-            }
-        ]);
+        .config(demoApp.config.routesConfig);
 }
