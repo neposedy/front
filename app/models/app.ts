@@ -1,6 +1,8 @@
 /// <reference path='../typings/angular/angular.d.ts' />
+/// <reference path='../typings/restangular/restangular.d.ts' />
 /// <reference path='controller.ts' />
 /// <reference path='router.ts' />
+/// <reference path='services.ts' />
 /// <reference path='../sections/footer/footer-controller.ts' />
 /// <reference path='../sections/header/header-controller.ts' />
 /// <reference path='../sections/homepage/homepage-controller.ts' />
@@ -11,8 +13,15 @@ module demoApp {
 
     angular
         .module('demo-app', [
-            'ui.router'
+            'ui.router',
+            'restangular'
         ])
+        .config((RestangularProvider : restangular.IProvider) => {
+            //RestangularProvider.setBaseUrl('api');
+        })
+        .service('UserService', UserService)
+        .service('DrawService', DrawService)
+        .service('ResultService', ResultService)
         .controller('HeaderController', HeaderController)
         .controller('FooterController', FooterController)
         .controller('HomepageController', HomepageController)
