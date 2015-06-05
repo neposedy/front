@@ -12,6 +12,9 @@ module demoApp {
         .module('demo-app', [
             'ui.router'
         ])
+        .controller('DemoController', HeaderController)
+        .controller('DemoController', FooterController)
+        .controller('DemoController', HomepageController)
         .controller('DemoController', DemoController)
         .config(demoApp.config.routesConfig);
 }
