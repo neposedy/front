@@ -14,11 +14,9 @@ module demoApp {
     angular
         .module('demo-app', [
             'ui.router',
-            'restangular'
+            'restangular',
+            'ngCookies'
         ])
-        .config((RestangularProvider : restangular.IProvider) => {
-            //RestangularProvider.setBaseUrl('api');
-        })
         .service('UserService', UserService)
         .service('DrawService', DrawService)
         .service('ResultService', ResultService)
