@@ -53,6 +53,7 @@ gulp.task('ts-lint', 'Lint all custom TypeScript files.', function () {
  */
 gulp.task('compile-ts', 'Compile TypeScript and include references to library and app .d.ts files.', function () {
     var sourceTsFiles = [config.allTypeScript,                //path to typescript files
+                         config.allTypeSections,              //path to typescript sections
                          config.libraryTypeScriptDefinitions, //reference to library .d.ts files
                          config.appTypeScriptReferences];     //reference to app.d.ts files
 

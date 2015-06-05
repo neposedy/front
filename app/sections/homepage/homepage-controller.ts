@@ -21,10 +21,6 @@ module demoApp {
         }
 
 
-        setName(name: string) {
-            this.$scope.name = name;
-        }
-
     }
 
 }

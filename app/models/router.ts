@@ -3,6 +3,7 @@
 
 
 
+
 module demoApp {
     'use strict';
 
@@ -13,7 +14,7 @@ module demoApp {
         private init(): void {
 
             this.$stateProvider
-                .state('neposedy', <ng.ui.IState> {
+                .state('neposedy', {
                     abstract: true,
                     templateUrl: 'templates/main.html'
                 })
@@ -24,19 +25,19 @@ module demoApp {
                             template: '<div ui-view/>'
                         },
                         'footer': {
-                            controller: 'FooterCtrl',
-                            templateUrl: 'app/sections/footer/footer.html'
+                            controller: 'FooterController',
+                            templateUrl: 'templates/footer.html'
                         },
                         'header': {
-                            controller: 'HeaderCtrl',
-                            templateUrl: 'app/sections/header/header.html'
+                            controller: 'HeaderController',
+                            templateUrl: 'templates/header.html'
                         }
                     }
                 })
                 .state('neposedy.layout.homepage', {
                     url: '/',
-                    templateUrl: 'app/sections/homepage/homepage.html',
-                    controller: 'HomepageCtrl'
+                    templateUrl: 'templates/homepage.html',
+                    controller: 'HomepageController'
                 });
 
             this.$urlRouterProvider.otherwise('/');
