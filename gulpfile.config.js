@@ -12,7 +12,7 @@ var GulpConfig = (function () {
         this.allTypeSections = this.sourceApp + '/sections/**/*.ts';
         this.publicJsComponentsDir = this.public + '/' + 'js_components';
         this.allLessFiles = this.sourceApp + '/**/*.less';
-        this.allTemplateFiles = this.sourceApp + '/**/*.html';
+        this.allTemplateFiles = this.sourceApp + 'sections/**/*.html';
 
         this.compiledCssDir = this.public + '/css';
 

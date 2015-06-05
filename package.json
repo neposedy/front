@@ -16,7 +16,6 @@
   "devDependencies": {
     "del": "^1.2.0",
     "gulp": "^3.8.11",
-    "gulp-angular-templatecache": "^1.6.0",
     "gulp-batch": "^1.0.5",
     "gulp-bower": "^0.0.10",
     "gulp-concat": "^2.5.2",
