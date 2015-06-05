@@ -5,16 +5,47 @@ module demoApp {
 
     export class UserService {
 
+        private loggedUser;
         private path = 'api/Users';
+        private cookieAuthKey = 'authenticate';
 
-        public static $inject = ['Restangular'];
+        public static $inject = ['Restangular', '$cookies', '$q'];
 
-        constructor(private Restangular: restangular.IService) {}
+        constructor(private Restangular: restangular.IService,
+                    private $cookies,
+                    private $q) {}
 
-        get(id) {
+        get(id: string) {
             return this.Restangular.one(this.path, id).get();
         }
 
+        getLoggedUser() {
+            return this.$q.when(this.loggedUser || this.autoLoginUser());
+        }
+
+        autoLoginUser() {
+            var deferred = this.$q.defer(),
+                promise = deferred.promise;
+            //TODO: support getNewUser
+            return this.$q.when(this.loggedUser || this.getFromCookie());
+        }
+
+        getFromCookie() {
+            var storedUserId = this.$cookies.get(this.cookieAuthKey),
+                getPromise = this.get(storedUserId);
+            getPromise.then((user) => {
+                this.loggedUser = user;
+            });
+            return getPromise;
+        }
+
+        storeInCookie(user) {
+            this.$cookies.put(this.cookieAuthKey, user.id);
+        }
+
+        getNewUser() {
+            return this.Restangular.one(this.path, 'new').get();
+        }
     }
 
     export class DrawService {
@@ -25,7 +56,7 @@ module demoApp {
 
         constructor(private Restangular: restangular.IService) {}
 
-        get(id) {
+        get(id: string) {
             return this.Restangular.one(this.path, id).get();
         }
 
@@ -39,7 +70,7 @@ module demoApp {
 
         constructor(private Restangular: restangular.IService) {}
 
-        get(id) {
+        get(id: string) {
             return this.Restangular.one(this.path, id).get();
         }
 
