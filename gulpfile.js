@@ -106,6 +106,13 @@ gulp.task('less', 'Less -> css', function () {
         .pipe(gulp.dest(config.compiledCssDir));
 });
 
+gulp.task('angtemp', 'Angular templates', function () {
+    return gulp.src(config.allTemplateFiles)
+        .pipe($.angularTemplatecache())
+        .pipe(gulp.dest(config.public));
+});
+
+
 
 gulp.task('watch', 'Watch for changes and build it all.' , ['build'], function() {
     gulp.watch(config.allTypeScript, ['ts-lint', 'compile-ts', 'gen-ts-refs']);
@@ -114,7 +121,7 @@ gulp.task('watch', 'Watch for changes and build it all.' , ['build'], function()
     gulp.watch('bower.json', ['bower']);
 });
 
-gulp.task('build', 'Build it once', ['bower', 'less', 'ts-lint', 'compile-ts', 'assets']);
+gulp.task('build', 'Build it once', ['bower', 'less', 'angtemp','ts-lint', 'compile-ts', 'assets']);
 
 gulp.task('serve', 'Serve the generated stuff.', ['watch'], function() {
 //    gulp.start();
