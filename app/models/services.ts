@@ -60,6 +60,11 @@ module demoApp {
             return this.Restangular.one(this.path, id).get();
         }
 
+        getNew() {
+            return this.Restangular.one(this.path, 'new').get();
+        }
+
+
     }
 
     export class ResultService {

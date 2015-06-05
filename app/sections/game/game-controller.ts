@@ -11,14 +11,24 @@ module demoApp {
         // See http://docs.angularjs.org/guide/di
         public static $inject = [
             '$scope',
-            '$location'
+            '$location',
+            'DrawService'
         ];
 
         // dependencies are injected via AngularJS $injector
         // controller's name is registered in Application.ts and specified from ng-controller attribute in index.html
         constructor(private $scope:IDemoScope,
-                    private $location:ng.ILocationService) {
+                    private $location:ng.ILocationService,
+                    private drawservice:DrawService
+        ) {
+            drawservice.getNew().then((draw) => {
+                var firstg = [];
+                
+
+                this.$scope.draw = draw;
+            })
         }
+
 
 
     }

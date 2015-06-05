@@ -1,60 +1,60 @@
 <div class="game-page row middle-xs center-xs">
     <div class="game-field-wrap col-sm-12">
         <div class="game-field">
-
-            <div class="square-wrap">
+{{ draw }}
+            <div class="square-wrap" ng-repeat="num in draw.numbers track by $index">
                 <div class="square corner-square">
-                    <input type="text" value="15"/>
+                    <input type="text" ng.model="draw.numbers[num]" />
                 </div>
             </div>
 
-            <div class="square-wrap">
-                <div class="square">
-                    <input type="text"/>
-                </div>
-            </div>
+            <!--<div class="square-wrap">-->
+                <!--<div class="square">-->
+                    <!--<input type="text"/>-->
+                <!--</div>-->
+            <!--</div>-->
 
-            <div class="square-wrap">
-                <div class="square corner-square">
-                    <input type="text"/>
-                </div>
-            </div>
+            <!--<div class="square-wrap">-->
+                <!--<div class="square corner-square">-->
+                    <!--<input type="text"/>-->
+                <!--</div>-->
+            <!--</div>-->
 
-            <div class="square-wrap">
-                <div class="square">
-                    <input type="text"/>
-                </div>
-            </div>
+            <!--<div class="square-wrap">-->
+                <!--<div class="square">-->
+                    <!--<input type="text"/>-->
+                <!--</div>-->
+            <!--</div>-->
 
-            <div class="square-wrap">
-                <div class="square square-center row middle-xs center-xs">
-                    X
-                </div>
-            </div>
+            <!--<div class="square-wrap">-->
+                <!--<div class="square square-center row middle-xs center-xs">-->
+                    <!--X-->
+                <!--</div>-->
+            <!--</div>-->
 
-            <div class="square-wrap">
-                <div class="square">
-                    <input type="text"/>
-                </div>
-            </div>
+            <!--<div class="square-wrap">-->
+                <!--<div class="square">-->
+                    <!--<input type="text"/>-->
+                <!--</div>-->
+            <!--</div>-->
 
-            <div class="square-wrap">
-                <div class="square corner-square">
-                    <input type="text"/>
-                </div>
-            </div>
+            <!--<div class="square-wrap">-->
+                <!--<div class="square corner-square">-->
+                    <!--<input type="text"/>-->
+                <!--</div>-->
+            <!--</div>-->
 
-            <div class="square-wrap">
-                <div class="square">
-                    <input type="text"/>
-                </div>
-            </div>
+            <!--<div class="square-wrap">-->
+                <!--<div class="square">-->
+                    <!--<input type="text"/>-->
+                <!--</div>-->
+            <!--</div>-->
 
-            <div class="square-wrap">
-                <div class="square corner-square">
-                    <input type="text"/>
-                </div>
-            </div>
+            <!--<div class="square-wrap">-->
+                <!--<div class="square corner-square">-->
+                    <!--<input type="text"/>-->
+                <!--</div>-->
+            <!--</div>-->
 
         </div>
     </div>

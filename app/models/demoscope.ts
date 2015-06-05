@@ -2,6 +2,7 @@
 
 module demoApp {
     export interface IDemoScope extends ng.IScope {
-        name: string
+        name: string;
+        draw: any;
     }
 }
