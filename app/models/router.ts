@@ -38,6 +38,16 @@ module demoApp.config {
                 url: '/game',
                 templateUrl: 'templates/game/game.html',
                 controller: 'GameController'
+            })
+            .state('neposedy.layout.login', {
+                url: '/login',
+                templateUrl: 'templates/login/login.html',
+                controller: 'LoginController'
+            })
+            .state('neposedy.layout.register', {
+                url: '/register',
+                templateUrl: 'templates/login/register.html',
+                controller: 'RegisterController'
             });
 
     }
