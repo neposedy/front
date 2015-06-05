@@ -1,0 +1,60 @@
+
+
+.login-wrap {
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  a.login-row {
+    color: @white;
+    display: block;
+    clear: both;
+
+    &:hover {
+      color: @rgba-secondary-2-1;
+
+      .login-icon-wrap {
+
+        svg {
+          fill:@rgba-secondary-2-1;
+        }
+      }
+    }
+
+    .login-text {
+      display: inline-block;
+      line-height: 27px;
+      font-size: 16px;
+      padding: 5px 5px 0 5px;
+      float: right;
+    }
+
+    .login-icon-wrap {
+      float: right;
+      display: block;
+      width: 25px;
+      height: 25px;
+      padding: 5px 8px 5px 2px ;
+
+      svg {
+        fill:@white;
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+
+}
+
+
+
+
+@media only screen and (max-width: 460px) {
+
+  .flex-header {
+    text-align: left;
+    padding-left: 20px;
+  }
+}

@@ -4,6 +4,12 @@ body, html {
   padding: 0;
   margin: 0;
   height: 100%;
+  background: @color-primary-1;
+  font-family: 'Indie Flower', cursive;
+}
+
+a {
+  text-decoration: none;
 }
 
 .app-wrap {
@@ -32,14 +38,18 @@ body, html {
 }
 
 .flex-header {
-  min-height: 45px;
+  min-height: 55px;
   background: @rgba-primary-0;
   color: @white;
   text-align: center;
-  font-size: 2em;
-  line-height: 2em;
+  font-size: 2.5em;
+  line-height: 2.4em;
   font-family: 'Indie Flower', cursive;
   font-weight: bold;
+  
+  a {
+    color: @white;
+  }
 }
 
 .flex-footer {

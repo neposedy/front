@@ -7,6 +7,8 @@
 /// <reference path='../sections/header/header-controller.ts' />
 /// <reference path='../sections/homepage/homepage-controller.ts' />
 /// <reference path='../sections/game/game-controller.ts' />
+/// <reference path='../sections/login/login-controller.ts' />
+/// <reference path='../sections/login/register-controller.ts' />
 
 module demoApp {
     'use strict';
@@ -25,5 +27,7 @@ module demoApp {
         .controller('HomepageController', HomepageController)
         .controller('GameController', GameController)
         .controller('DemoController', DemoController)
+        .controller('LoginController', LoginController)
+        .controller('RegisterController', RegisterController)
         .config(demoApp.config.routesConfig);
 }
